@@ -53,6 +53,7 @@ package("imgui")
     add_configs("vulkan",           {description = "Enable the vulkan backend", default = false, type = "boolean"})
     add_configs("win32",            {description = "Enable the win32 backend", default = false, type = "boolean"})
     add_configs("wgpu",             {description = "Enable the wgpu backend", default = false, type = "boolean"})
+    add_configs("metal",            {description = "Enable the metal backend", default = false, type = "boolean"})
     add_configs("freetype",         {description = "Use FreeType to build and rasterize the font atlas", default = false, type = "boolean"})
     add_configs("user_config",      {description = "Use user config (disables test!)", default = nil, type = "string"})
     add_configs("wchar32",          {description = "Use 32-bit for ImWchar (default is 16-bit)", default = false, type = "boolean"})
@@ -134,6 +135,7 @@ package("imgui")
             vulkan           = package:config("vulkan"),
             win32            = package:config("win32"),
             wgpu             = package:config("wgpu"),
+            metal            = package:config("metal"),
             freetype         = package:config("freetype"),
             user_config      = package:config("user_config"),
             wchar32          = package:config("wchar32")
